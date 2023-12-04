@@ -19,7 +19,6 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
 }
 
 h1 {
@@ -213,16 +212,6 @@ h2 {
   color: #EFEBD8;
 }
 
-/* Playlist Grid Container Styles */
-.playlist-grid-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  margin: 20px 0;
-}
-
 .playlist-grid {
   display: flex;
   flex-wrap: wrap; /* This allows items to wrap into multiple rows */
@@ -231,16 +220,54 @@ h2 {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Playlist Grid Container Styles */
+.playlist-grid-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 2%; /* Adds space between grid items */
+  justify-content: space-evenly; /* Evenly distributes space around items */
+  align-items: flex-start; /* Aligns items to the start of the flex line */
+  padding: 0 20px; /* Adds padding inside the container */
+}
 
 .playlist-grid-item {
-  flex: 0 0 48%; /* Slightly less than half to allow space between items */
-  max-width: 48%; /* Corresponding to flex-basis */
-  margin: 10px 1%; /* Adds space around each item */
-  box-sizing: border-box;
+  flex: 0 0 calc(50% - 20px); /* Each item takes up half the container width minus the gap */
+  margin: 10px 0; /* Adds vertical space around each item */
   border-radius: 10px; /* Adds rounded corners */
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: adds subtle shadow for depth */
   background-color: #282c34; /* Your chosen background color */
-  /* Add any additional styling as needed */
+  /* Ensure no additional margins or paddings are affecting the width */
+  box-sizing: border-box; /* Makes sure padding and border are included in the width */
+  cursor: pointer;
 }
+
+.playlist-content {
+  display: none; /* Initially hidden */
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* Add styling for the dropdown trigger */
+.dropdown-trigger {
+  cursor: pointer;
+  padding: 10px;
+  display: inline-block; /* So that it does not take full width */
+}
+
+/* Initially hide the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown content when the parent div has the .show class */
+.dropdown .show {
+  display: block;
+}
+
 

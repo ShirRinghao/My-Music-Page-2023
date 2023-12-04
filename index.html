@@ -187,83 +187,94 @@
     <div class="container section-padding section-margin">
         <h2>Top Songs by Artists</h2>
         <div id="playlistGrid" class="playlist-grid">
-        <!-- Playlist 1 -->
-        <div class="playlist-grid-item">
-            <div class="playlist">
-            <!-- Replace with your playlist content -->
-            <h3>Jay Chou</h3>
-            <!-- Image or embedded playlist -->
-            </div>
-        </div>
+            <div class="playlist-grid-item" onclick="toggleAlbums('Jay Chou')">
+                <h3>Jay Chou</h3>
+                <div id="JayChouAlbums" class="playlist-content" style="display: none;">
+                  <!-- The iframe will be inserted here -->
+                </div>
+              </div>
+              
     
-        <!-- Playlist 2 -->
-        <div class="playlist-grid-item">
-            <div class="playlist">
-            <h3>Mayday</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                <h3>Mayday</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-            <h3>Yoga Lin</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                <h3>Yoga Lin</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-            <h3>Eason Chan</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                <h3>Eason Chan</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-            <h3>Tanya Chua</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                <h3>Tanya Chua</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-                <h3>Coldplay</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                    <h3>Coldplay</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-                <h3>Imagine Dragons</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                    <h3>Imagine Dragons</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-                <h3>Yanzi Sun</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                    <h3>Yanzi Sun</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-            <h3>Taylor Swift</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                <h3>Taylor Swift</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-            <h3>Justin Bieber</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                <h3>Justin Bieber</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-            <h3>Fish Leong</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                <h3>Fish Leong</h3>
+                </div>
             </div>
-        </div>
 
-        <div class="playlist-grid-item">
-            <div class="playlist">
-            <h3>Ed Sheeran</h3>
+            <div class="playlist-grid-item">
+                <div class="playlist">
+                <h3>Ed Sheeran</h3>
+                </div>
             </div>
         </div>
     </div>
+    
+    <div class="container section-padding section-margin">
+        <h2>My Favorite Playlists</h2>
+        <div class="playlist-grid-container">
+          <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" 
+          height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" 
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+          src="https://embed.music.apple.com/us/playlist/jerrystonehao/pl.u-RRbVvlxImjLv6W7?l=zh-Hans-CN"></iframe>
+        </div>
+      </div>
       
+      
+    
     <script src="js/script.js"></script>
 </body>
 </html>
