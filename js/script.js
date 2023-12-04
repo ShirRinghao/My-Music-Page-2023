@@ -1,6 +1,6 @@
 // Example list of music tracks with YouTube links and initial count
 const musicTracks = [
-    { title: "Won't Cry", youtubeLink: "https://www.youtube.com/embed/K7SPnGSxLM"}
+    { title: "Won't Cry", youtubeLink: "https://www.youtube.com/embed/HK7SPnGSxLM"}
     // Add more songs here
 ];
 
