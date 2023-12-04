@@ -15,10 +15,9 @@ function renderMusicList() {
     musicTracks.forEach((track, index) => {
         const listItem = document.createElement('div');
         listItem.innerHTML = `
-            <p>${index + 1}. ${track.title} - Number of Times Played: ${track.count}</p>
+            <p>${index + 1}. ${track.title} </p>
             <iframe width="560" height="315" src="${track.youtubeLink}" frameborder="0" allowfullscreen></iframe>
             <br>
-            <button onclick="incrementPlayCount(${index})">Increase Play Count</button>
             <button onclick="window.open('${track.youtubeLink.replace('/embed/', '/watch?v=')}')">Watch on YouTube</button>
         `;
         musicList.appendChild(listItem);
