@@ -38,11 +38,32 @@ h2 {
   border-bottom: 2px solid #eaeaea;
 }
 
-/* Music Tracks Section */
-#musicList {
-  margin-bottom: 40px; /* Space between sections */
-  text-align: center;
+/* Footer with your name and date */
+.footer {
+  text-align: right;
+  margin-top: 40px; /* Space from the above content */
+  color: #fff;
+  font-size:  20px;
 }
+
+/* Watch on YouTube Button Styling */
+.watch-youtube-btn {
+  background-color: #FF0000; /* YouTube's brand red color */
+  color: #FFFFFF; /* White color for the text */
+  padding: 10px 15px;
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Make text bold */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.watch-youtube-btn:hover {
+  background-color: #E62117; /* Slightly darker red on hover */
+}
+
 
 /* Set Grid Style*/
 .grid-container {
@@ -86,9 +107,10 @@ h2 {
 }
 
 .rank-number {
-    font-size: 2em; /* Make the rank number larger */
+    font-size: 60px; /* Make the rank number larger */
     font-weight: bold; /* Bold for emphasis */
     padding-right: 10px; /* Space between rank number and artist info */
+    margin: 2px;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -175,7 +197,6 @@ h2 {
   margin-bottom: 40px; /* Adjust the value as needed */
 }
 
-
 /* Most Played Song Section Styling */
 #mostPlayedSong {
   background: rgba(255, 255, 255, 0.1); /* Slightly transparent white for contrast */
@@ -186,22 +207,8 @@ h2 {
   text-align: center; /* Center text for aesthetics */
 }
 
-/* Song Title Styling */
-.song-title {
-  font-size: 2em; /* Larger font for title */
-  font-weight: bold;
-  margin-bottom: 10px; /* Space before additional song info */
-  color: #fff; /* White color for title */
-}
 
-/* Artist Name Styling */
-.artist-name {
-  font-style: italic; /* Styling for artist name */
-  margin-bottom: 5px; /* Space before song details */
-}
-
-/* Additional Song Info Styling */
-.song-info {
-  font-size: 1em;
-  color: #ccc; /* Lighter text color for additional info */
+.artist-playtime{
+  font-size: 15px;
+  color: #EFEBD8;
 }

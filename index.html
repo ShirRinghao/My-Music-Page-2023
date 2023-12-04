@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>My Top 20 Music Tracks</title>
 </head>
 <body>
     <div class="container section-padding section-margin">
-        <h1>My Music Replay 2023</h1>
+        <h1>My Music Replay 2023
+            <div class="footer">
+                Curated by Linghao Shi - <script>document.write(new Date().toLocaleDateString());</script>
+              </div>
+        </h1>
         <p>As the world danced to the pulsating beats of 2023, the music scene witnessed an eclectic 
             symphony of new trends and viral sensations. Chart-toppers were painted with bold strokes 
             of experimental sounds, with artists pushing the boundaries of creativity, from the electric 
@@ -21,14 +26,20 @@
              that defined not just the year but the essence of my musical identity.</p>
     </div>
 
-    <div id="mostPlayedSong">
-        <div class="song-title">"Won't Cry"</div>
-        <div class="artist-name">by Jay Chou & Ashin</div>
-        <div class="song-info">
-          A soul-stirring ballad that resonates with the themes of love and longing, "Won't Cry" showcases Jay Chou's poignant vocals and Ashin's heartfelt lyrics, making it a timeless piece in my 2023 playlist.
+    <div class="container section-padding section-margin">
+        <h2>2023's Soundtrack Highlight</h2>
+        <div id="mostPlayedSong">
+        <div class="song-name">Won't Cry</div>
+        <div class="artist-name"><i>by Jay Chou & Ashin</i></div><br>
+        <div class="youtube-video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HK7SPnGSxLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div id="musicList"></div>
+          
+        <button class="watch-youtube-btn" onclick="window.open('https://www.youtube.com/watch?v=HK7SPnGSxLM')">
+            <i class="fab fa-youtube"></i> Watch on YouTube
+          </button>
       </div>
+    </div>
 
     <div class="container section-padding section-margin">
         <h2>Top Artists</h2>
@@ -171,6 +182,10 @@
             </div>
             <button class="scroll-button right" onclick="scrollGrid('right')">→</button>
         </div>
+    </div>
+
+    <div class="container section-padding section-margin">
+        <h2>Top Songs by Artists</h2>
     </div>
 
     <script src="js/script.js"></script>

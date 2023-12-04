@@ -1,36 +1,3 @@
-// Example list of music tracks with YouTube links and initial count
-const musicTracks = [
-    { title: "Won't Cry", youtubeLink: "https://www.youtube.com/embed/HK7SPnGSxLM"}
-    // Add more songs here
-];
-
-function renderMusicList() {
-  const musicList = document.getElementById('musicList');
-  musicList.innerHTML = ''; // Clear the list
-
-  // Assuming the first track is the most played
-  const track = musicTracks[0];
-
-  const listItem = document.createElement('div');
-  listItem.innerHTML = `
-      <p>${track.title}</p>
-      <iframe width="560" height="315" src="${track.youtubeLink}" frameborder="0" allowfullscreen></iframe>
-      <br>
-      <button onclick="window.open('${track.youtubeLink.replace('/embed/', '/watch?v=')}')">Watch on YouTube</button>
-  `;
-  musicList.appendChild(listItem);
-}
-
-// Initial render
-renderMusicList();
-
-
-function incrementPlayCount(index) {
-    const track = musicTracks[index];
-    track.count++;
-    renderMusicList(); // Re-render the list to update counts and order
-}
-
 function updateScrollButtons() {
     const grid = document.getElementById('artistGrid');
     const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
@@ -66,8 +33,4 @@ function scrollGrid(direction) {
 document.addEventListener('DOMContentLoaded', updateScrollButtons);
   
 
-  
 
-  
-// Initial render
-renderMusicList();
