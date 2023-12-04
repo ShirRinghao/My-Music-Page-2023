@@ -212,3 +212,35 @@ h2 {
   font-size: 15px;
   color: #EFEBD8;
 }
+
+/* Playlist Grid Container Styles */
+.playlist-grid-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.playlist-grid {
+  display: flex;
+  flex-wrap: wrap; /* This allows items to wrap into multiple rows */
+  justify-content: center; /* Centers items horizontally */
+  align-items: flex-start; /* Aligns items to the start of the flex line */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+.playlist-grid-item {
+  flex: 0 0 48%; /* Slightly less than half to allow space between items */
+  max-width: 48%; /* Corresponding to flex-basis */
+  margin: 10px 1%; /* Adds space around each item */
+  box-sizing: border-box;
+  border-radius: 10px; /* Adds rounded corners */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: adds subtle shadow for depth */
+  background-color: #282c34; /* Your chosen background color */
+  /* Add any additional styling as needed */
+}
+
