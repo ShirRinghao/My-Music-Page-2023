@@ -1,0 +1,58 @@
+.grid-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .grid {
+    flex: 0 0 90%; /* Grid takes up 90% of the container width */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-left: 5%; /* Make room for the left button */
+  }
+  
+  .grid-item {
+    flex: 0 0 calc(25% - 20px); /* Adjust for margin */
+    margin: 10px; /* Ensure this matches the margin in the JavaScript calculation */
+  }
+  
+  
+  .artist-image {
+    width: 100%; /* Adjust width if necessary */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+}
+
+.artist-info-container {
+    display: flex;
+    align-items: center;
+}
+
+.rank-number {
+    font-size: 2em; /* Make the rank number larger */
+    font-weight: bold; /* Bold for emphasis */
+    padding-right: 10px; /* Space between rank number and artist info */
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.artist-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Align the text to the left */
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    text-align: center;
+    font-family: Arial, sans-serif; /* Or any other font you prefer */
+    width: calc(25% - 20px); /* Adjust for margin */
+    margin: 10px;
+    position: relative; /* Position relative for absolute child elements */
+}
