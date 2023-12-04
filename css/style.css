@@ -7,11 +7,13 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f2;
-  color: #333;
+  background: radial-gradient(circle at center, #0f0f0f 0%, #353535 60%, #5b5b5b 100%);
+  color: #fff;
   line-height: 1.6;
   padding: 20px;
+  margin: 0;
 }
+
 
 /* Container Styles */
 .container {
@@ -20,8 +22,16 @@ body {
   padding: 20px;
 }
 
+h1 {
+  font-size: 50px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eaeaea;
+}
+
 /* Section Heading Styles */
 h2 {
+  font-size: 30px;
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 2px solid #eaeaea;
@@ -39,6 +49,13 @@ h2 {
     position: relative;
     width: 100%;
     overflow: hidden;
+
+    background: linear-gradient(to right, #4b6cb7, #182848); /* Smooth transition from light to dark */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: #fff;
   }
   
   .grid {
@@ -90,4 +107,57 @@ h2 {
     width: calc(25% - 20px); /* Adjust for margin */
     margin: 10px;
     position: relative; /* Position relative for absolute child elements */
+}
+
+/* Scroll Button Styles */
+.scroll-button {
+  background-color: #ffffff; /* White background for the button */
+  color: #000000; /* Black color for the arrows */
+  border-radius: 50%; /* Circular shape */
+  width: 40px; /* Width of the button */
+  height: 40px; /* Height of the button, should be equal to width for circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Circular shadow for visibility */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.scroll-button.left {
+  left: 20px; /* Adjust as needed for positioning */
+}
+
+.scroll-button.right {
+  right: 20px; /* Adjust as needed for positioning */
+}
+
+.scroll-button:hover {
+  color: #000000; /* Color change on hover for interactivity */
+  background-color: #e0e0e0; /* Slightly darker background on hover */
+}
+
+
+/* Add gap between the artist image and text description */
+.artist-info-container {
+  margin-top: 15px; /* Space above the artist info */
+}
+
+/* Responsive behavior for the grid-container */
+@media (max-width: 768px) {
+  .grid {
+    flex: 0 0 100%; /* Take full width on smaller screens */
+    margin-left: 0; /* No need to make room for the buttons on smaller screens */
+  }
+
+  .grid-container {
+    padding: 10px; /* Less padding on smaller screens */
+  }
+
+  .grid-item {
+    width: 100%; /* Full width for each grid item on smaller screens */
+  }
 }
