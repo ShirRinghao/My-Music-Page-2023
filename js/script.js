@@ -5,24 +5,25 @@ const musicTracks = [
 ];
 
 function renderMusicList() {
-    const musicList = document.getElementById('musicList');
-    musicList.innerHTML = ''; // Clear the list
+  const musicList = document.getElementById('musicList');
+  musicList.innerHTML = ''; // Clear the list
 
-    // Sort the music tracks based on count
-    musicTracks.sort((a, b) => b.count - a.count);
+  // Assuming the first track is the most played
+  const track = musicTracks[0];
 
-    // Create list items for each track
-    musicTracks.forEach((track, index) => {
-        const listItem = document.createElement('div');
-        listItem.innerHTML = `
-            <p>${index + 1}. ${track.title}</p>
-            <iframe width="560" height="315" src="${track.youtubeLink}" frameborder="0" allowfullscreen></iframe>
-            <br>
-            <button onclick="window.open('${track.youtubeLink.replace('/embed/', '/watch?v=')}')">Watch on YouTube</button>
-        `;
-        musicList.appendChild(listItem);
-    });
+  const listItem = document.createElement('div');
+  listItem.innerHTML = `
+      <p>${track.title}</p>
+      <iframe width="560" height="315" src="${track.youtubeLink}" frameborder="0" allowfullscreen></iframe>
+      <br>
+      <button onclick="window.open('${track.youtubeLink.replace('/embed/', '/watch?v=')}')">Watch on YouTube</button>
+  `;
+  musicList.appendChild(listItem);
 }
+
+// Initial render
+renderMusicList();
+
 
 function incrementPlayCount(index) {
     const track = musicTracks[index];
