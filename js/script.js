@@ -1,6 +1,6 @@
 // Example list of music tracks with YouTube links and initial count
 const musicTracks = [
-    { title: "Wont't Cry", youtubeLink: "https://www.youtube.com/watch?v=HK7SPnGSxLM"}
+    { title: "Won't Cry", youtubeLink: "https://www.youtube.com/embed/K7SPnGSxLM"}
     // Add more songs here
 ];
 
@@ -15,7 +15,7 @@ function renderMusicList() {
     musicTracks.forEach((track, index) => {
         const listItem = document.createElement('div');
         listItem.innerHTML = `
-            <p>${index + 1}. ${track.title} </p>
+            <p>${index + 1}. ${track.title}</p>
             <iframe width="560" height="315" src="${track.youtubeLink}" frameborder="0" allowfullscreen></iframe>
             <br>
             <button onclick="window.open('${track.youtubeLink.replace('/embed/', '/watch?v=')}')">Watch on YouTube</button>
