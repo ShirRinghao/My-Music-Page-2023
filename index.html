@@ -8,152 +8,170 @@
     <title>My Top 20 Music Tracks</title>
 </head>
 <body>
-    <h1>My Music Replay 2023</h1>
+    <div class="container section-padding section-margin">
+        <h1>My Music Replay 2023</h1>
+        <p>As the world danced to the pulsating beats of 2023, the music scene witnessed an eclectic 
+            symphony of new trends and viral sensations. Chart-toppers were painted with bold strokes 
+            of experimental sounds, with artists pushing the boundaries of creativity, from the electric 
+            buzz of K-pop's global takeover to the resurgence of vinyl in a digital age. Yet, amidst this 
+            modern mosaic of melodies, my playlist remained a canvas of the past, a personal tribute to 
+            the timeless tunes that echo with memories. It's a year where the new waltzed with the old,
+             and here on my blog, I've curated a collection that defies time – a harmonious blend where 
+             classic beats from yesteryears still reign supreme. Join me as I rewind through the tracks 
+             that defined not just the year but the essence of my musical identity.</p>
+    </div>
 
-    <h2>Most Played Song</h2>
-    <div id="musicList"></div>
-
-    <h2>Top Artists</h2>
-    <div class="grid-container">
-        <button class="scroll-button left" onclick="scrollGrid('left')">←</button>
-        <div id="artistGrid" class="grid">
-
-            <div class="grid-item">
-                <img src= "images/jay_chou_image.jpg" alt="Jay Chou" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">1</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Jay Chou</div>
-                        <div class="artist-playtime">5,373 minutes</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <img src="images/mayday_image.jpg" alt="Mayday" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">2</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Mayday</div>
-                        <div class="artist-playtime">1,595 minutes</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <img src="images/yoga_lin_image.jpg" alt="Yoga Lin" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">3</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Yoga Lin</div>
-                        <div class="artist-playtime">1,303 minutes</div>
-                    </div>
-                </div>
-            </div>
-              
-            <div class="grid-item">
-                <img src="images/eason_chan_image.jpg" alt="Eason Chan" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">4</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Eason Chan</div>
-                        <div class="artist-playtime">610 minutes</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <img src="images/tanya_chua_image.jpg" alt="Tanya Chua" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">5</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Tanya Chua</div>
-                        <div class="artist-playtime">604 minutes</div>
-                    </div>
-                </div>
-            </div>
-              
-            <div class="grid-item">
-                <img src="images/coldplay_image.jpg" alt="Coldplay" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">6</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Coldplay</div>
-                        <div class="artist-playtime">480 minutes</div>
-                    </div>
-                </div>
-            </div>
-              
-            <div class="grid-item">
-                <img src="images/imagine_dragons_image.jpg" alt="Imagine Dragons" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">7</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Imagine Dragons</div>
-                        <div class="artist-playtime">396 minutes</div>
-                    </div>
-                </div>
-            </div>
-              
-            <div class="grid-item">
-                <img src="images/yanzi_sun_image.jpg" alt="Yanzi Sun" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">8</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Yanzi Sun</div>
-                        <div class="artist-playtime">387 minutes</div>
-                    </div>
-                </div>
-            </div>
-              
-            <div class="grid-item">
-                <img src="images/taylor_swift_image.jpg" alt="Taylor Swift" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">9</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Taylor Swift</div>
-                        <div class="artist-playtime">374 minutes</div>
-                    </div>
-                </div>
-            </div>
-              
-            <div class="grid-item">
-                <img src="images/justin_bieber_image.jpg" alt="Justin Bieber" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">10</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Justin Bieber</div>
-                        <div class="artist-playtime">318 minutes</div>
-                    </div>
-                </div>
-            </div>
-              
-            <div class="grid-item">
-                <img src="images/fish_leong_image.jpg" alt="Fish Leong" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">11</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Fish Leong</div>
-                        <div class="artist-playtime">312 minutes</div>
-                    </div>
-                </div>
-            </div>
-              
-            <div class="grid-item">
-                <img src="images/ed_sheeran_image.jpg" alt="Ed Sheeran" class="artist-image"/>
-                <div class="artist-info-container">
-                    <span class="rank-number">12</span>
-                    <div class="artist-info">
-                        <div class="artist-name">Ed Sheeran</div>
-                        <div class="artist-playtime">297 minutes</div>
-                    </div>
-                </div>
-            </div>
-              
+    <div id="mostPlayedSong">
+        <div class="song-title">"Won't Cry"</div>
+        <div class="artist-name">by Jay Chou & Ashin</div>
+        <div class="song-info">
+          A soul-stirring ballad that resonates with the themes of love and longing, "Won't Cry" showcases Jay Chou's poignant vocals and Ashin's heartfelt lyrics, making it a timeless piece in my 2023 playlist.
         </div>
-        <button class="scroll-button right" onclick="scrollGrid('right')">→</button>
+        <div id="musicList"></div>
       </div>
-      
+
+    <div class="container section-padding section-margin">
+        <h2>Top Artists</h2>
+        <div class="grid-container">
+            <button class="scroll-button left" onclick="scrollGrid('left')">←</button>
+            <div id="artistGrid" class="grid">
+
+                <div class="grid-item">
+                    <img src= "images/jay_chou_image.jpg" alt="Jay Chou" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">1</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Jay Chou</div>
+                            <div class="artist-playtime">5,373 minutes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img src="images/mayday_image.jpg" alt="Mayday" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">2</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Mayday</div>
+                            <div class="artist-playtime">1,595 minutes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img src="images/yoga_lin_image.jpg" alt="Yoga Lin" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">3</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Yoga Lin</div>
+                            <div class="artist-playtime">1,303 minutes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/eason_chan_image.jpg" alt="Eason Chan" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">4</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Eason Chan</div>
+                            <div class="artist-playtime">610 minutes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img src="images/tanya_chua_image.jpg" alt="Tanya Chua" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">5</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Tanya Chua</div>
+                            <div class="artist-playtime">604 minutes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/coldplay_image.jpg" alt="Coldplay" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">6</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Coldplay</div>
+                            <div class="artist-playtime">480 minutes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/imagine_dragons_image.jpg" alt="Imagine Dragons" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">7</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Imagine Dragons</div>
+                            <div class="artist-playtime">396 minutes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/yanzi_sun_image.jpg" alt="Yanzi Sun" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">8</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Yanzi Sun</div>
+                            <div class="artist-playtime">387 minutes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/taylor_swift_image.jpg" alt="Taylor Swift" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">9</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Taylor Swift</div>
+                            <div class="artist-playtime">374 minutes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/justin_bieber_image.jpg" alt="Justin Bieber" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">10</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Justin Bieber</div>
+                            <div class="artist-playtime">318 minutes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/fish_leong_image.jpg" alt="Fish Leong" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">11</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Fish Leong</div>
+                            <div class="artist-playtime">312 minutes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/ed_sheeran_image.jpg" alt="Ed Sheeran" class="artist-image"/>
+                    <div class="artist-info-container">
+                        <span class="rank-number">12</span>
+                        <div class="artist-info">
+                            <div class="artist-name">Ed Sheeran</div>
+                            <div class="artist-playtime">297 minutes</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="scroll-button right" onclick="scrollGrid('right')">→</button>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

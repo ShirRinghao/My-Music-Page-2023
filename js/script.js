@@ -46,7 +46,7 @@ function updateScrollButtons() {
 }
 
   
-  function scrollGrid(direction) {
+function scrollGrid(direction) {
     const grid = document.getElementById('artistGrid');
     const gridItemWidth = grid.querySelector('.grid-item').offsetWidth;
     const gridItemMargin = parseInt(window.getComputedStyle(grid.querySelector('.grid-item')).marginLeft);
@@ -60,12 +60,12 @@ function updateScrollButtons() {
     
     // Update the buttons after the scroll event
     setTimeout(updateScrollButtons, 200); // Set timeout to ensure scroll event completes
-  }
+}
   
-  // Initial button visibility check
-  document.addEventListener('DOMContentLoaded', updateScrollButtons);
+// Initial button visibility check
+document.addEventListener('DOMContentLoaded', updateScrollButtons);
   
-  
+
   
 
   
