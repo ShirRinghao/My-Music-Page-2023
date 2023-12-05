@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #4b6cb7;
+  --secondary-color: #182848;
+  --highlight-color: #FF0000; /* YouTube's red */
+  --text-color: #ffffff;
+}
+
 /* Basic Reset */
 * {
   margin: 0;
@@ -45,6 +52,41 @@ h2 {
   font-size:  20px;
 }
 
+.skip-to-main {
+  position: fixed; /* Fixed position to keep it in place */
+  top: -40px; /* Initially hide it offscreen */
+  left: 0;
+  background: #1a73e8;
+  color: #ffffff;
+  padding: 8px 16px;
+  z-index: 1000; /* High z-index to ensure visibility */
+  border-radius: 0 0 5px 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: top 0.3s; /* Smooth transition for appearing */
+}
+
+.skip-to-main:focus, .skip-to-main:hover {
+  top: 0; /* Bring into view when focused or hovered */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.7);
+}
+
+.fixed-clock {
+  position: fixed;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  background: #333; /* Or any color you prefer */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1001; /* Above other content */
+}
+
+.song-name{
+  font-size: 40px;
+}
+
 /* Watch on YouTube Button Styling */
 .watch-youtube-btn {
   background-color: #FF0000; /* YouTube's brand red color */
@@ -70,7 +112,7 @@ h2 {
     align-items: center;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     background: linear-gradient(to right, #4b6cb7, #182848); /* Smooth transition from light to dark */
     padding: 20px;
     margin: 20px 0;
@@ -214,10 +256,15 @@ h2 {
 
 .playlist-grid {
   display: flex;
+  transition: transform 0.3s ease;
   flex-wrap: wrap; /* This allows items to wrap into multiple rows */
   justify-content: center; /* Centers items horizontally */
   align-items: flex-start; /* Aligns items to the start of the flex line */
   overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.playlist-grid-item:hover {
+  transform: scale(1.03); /* Slightly enlarge grid items on hover */
 }
 
 /* Playlist Grid Container Styles */
@@ -231,43 +278,36 @@ h2 {
 }
 
 .playlist-grid-item {
-  flex: 0 0 calc(50% - 20px); /* Each item takes up half the container width minus the gap */
-  margin: 10px 0; /* Adds vertical space around each item */
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(50% - 40px); /* Each item takes up half the container width minus the gap */
+  margin: 15px 20px; /* Adds vertical space around each item */
   border-radius: 10px; /* Adds rounded corners */
-  padding: 10px;
+  padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: adds subtle shadow for depth */
   background-color: #282c34; /* Your chosen background color */
-  /* Ensure no additional margins or paddings are affecting the width */
+  position: relative;
   box-sizing: border-box; /* Makes sure padding and border are included in the width */
   cursor: pointer;
 }
 
 .playlist-content {
   display: none; /* Initially hidden */
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-
-/* Add styling for the dropdown trigger */
-.dropdown-trigger {
-  cursor: pointer;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  margin-top: 20px;
   padding: 10px;
-  display: inline-block; /* So that it does not take full width */
 }
 
-/* Initially hide the dropdown content */
-.dropdown-content {
-  display: none;
+.arrow-icon {
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* Show the dropdown content when the parent div has the .show class */
-.dropdown .show {
-  display: block;
+.playlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-
