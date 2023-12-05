@@ -21,7 +21,6 @@ body {
   margin: 0;
 }
 
-
 /* Container Styles */
 .container {
   max-width: 1200px;
@@ -104,7 +103,6 @@ h2 {
 .watch-youtube-btn:hover {
   background-color: #E62117; /* Slightly darker red on hover */
 }
-
 
 /* Set Grid Style*/
 .grid-container {
@@ -281,7 +279,7 @@ h2 {
   display: flex;
   flex-direction: column;
   flex: 0 0 calc(50% - 40px); /* Each item takes up half the container width minus the gap */
-  margin: 15px 20px; /* Adds vertical space around each item */
+  margin: 10px 20px; /* Adds vertical space around each item */
   border-radius: 10px; /* Adds rounded corners */
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: adds subtle shadow for depth */
